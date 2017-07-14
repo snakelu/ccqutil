@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="">
+    <input id="excel" type="file" value="上传文件"  data-url="/excel/upload" style="width:300px;" multiple />
+</div>
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/jquery.fileupload.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/jquery-form.js"></script>
+<script src="../js/common.js"></script>
+<script>
+$("#excel").fileupload({
+	add: function (e, data) {//在submit执行之前的必经之路，逻辑操作在add中操作。e目标对象obj的属性结合，data为要上传文件的相关数据
+		var id = e.target.id;
+		var valid = true;
+		$.each(data.files,function(i,n){
+			var jqXHR = data.submit()
+            .success(function (result, textStatus, jqXHR) {
+            	successCallback(id,result);
+            })
+            .error(function (jqXHR, textStatus, errorThrown) {
+            	failCallback(errorThrown)
+            })
+            .complete(function (result, textStatus, jqXHR) {
+            });
+	    });
+	}
+});
+</script>
+</body>
+</html>

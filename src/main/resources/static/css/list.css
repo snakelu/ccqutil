@@ -1,0 +1,65 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 微软雅黑,宋体;
+	background: #EDF1F2;
+}
+
+.listarea {
+	margin-left: 100px;
+    padding: 0px 30px 30px 30px;
+    background: #fff;
+	height:500px;
+	position: absolute;
+	width: 70%;
+	z-index:999;
+}
+
+.listarea label {
+    font-size: 12px;
+}
+
+#storeTable {
+    padding-top: 5px;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+#storeTable thead,
+#storeTable tbody {
+    font-size: 12px;
+    height: 36px;
+    text-align: center;
+    background: #F2F5F6;
+}
+
+#storeTable th {
+    border-top: 3px solid #E7EAEC;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+#storeTable td span {
+    margin: 0 5px;
+    cursor: pointer;
+    color: #07ccdf;
+}
+
+#storeTable td span:active {
+    color: #03B4C3;
+}
+
+.listarea .dataTables_info,
+.listarea .dataTables_paginate {
+    font-family: 微软雅黑,宋体;
+    font-size: 12px;
+}
+
+.merchantNameCss{
+    width: 100px;
+    color: #000;
+    height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
